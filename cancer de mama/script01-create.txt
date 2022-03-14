@@ -1,0 +1,12 @@
+CREATE TABLE `tb_dados` (
+  `classe` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `idade` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `menopausa` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tamanho_tumor` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `inv_nodes` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `node_caps` varchar(3) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deg_malig` int DEFAULT NULL,
+  `seio` varchar(5) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quadrante` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `irradiando` varchar(3) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
