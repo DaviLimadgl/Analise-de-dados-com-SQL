@@ -7,3 +7,7 @@
 - operadores;
 - Junções;
 - Agregações;
+
+###### Parece que nem todos arquivos com as fontes de dados foram carregados aqui, então segue o link para baixá-los, faça download do arquivo zip
+Link para a fonte de dados:
+https://www.kaggle.com/nosbielcs/brazilian-delivery-center
