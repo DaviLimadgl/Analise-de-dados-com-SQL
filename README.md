@@ -1,7 +1,7 @@
 # Analise-de-dados-com-SQL
 ## O material deste reposítorio faz parte do curso SQL para Datascience da Datascience Academy
 ###### Aqui estão inclusos:
-- [Consultas](Inspeção de navios/script02-querys.sql);
+- [Consultas](https://github.com/DaviLimadgl/Analise-de-dados-com-SQL/blob/28fcce3efd3f8703d89741fa1fe8fb33efa6e1eb/Inspe%C3%A7%C3%A3o%20de%20navios/script02-querys.sql);
 - filtros;
 - ordenação;
 - operadores;
