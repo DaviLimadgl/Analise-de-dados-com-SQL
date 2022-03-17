@@ -13,8 +13,8 @@ limit 10;
 SELECT nome_navio, classificacao_risco, pontuacao_risco,indice_conformidade,temporada 
 FROM cap02.tb_navios
 where  indice_conformidade in ( SELECT indice_conformidade
-								FROM cap02.tb_navios
-								where  indice_conformidade > 90 )
+				FROM cap02.tb_navios
+				where  indice_conformidade > 90 )
                                 and pontuacao_risco = 0 
                                 and mes_ano = '04/2018' 
 order by indice_conformidade ;
