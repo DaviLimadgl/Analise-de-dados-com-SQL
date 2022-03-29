@@ -7,7 +7,7 @@
 - operadores;
 - Junções;
 - Agregações;
-- Window Function;
+- [Window Function](https://github.com/DaviLimadgl/Analise-de-dados-com-SQL/blob/main/bikes/script02-queries.sql);
 
 ###### Parece que nem todos arquivos com as fontes de dados foram carregados aqui, então segue o link para baixá-los, faça download do arquivo zip
 Link para a fonte de dados:
