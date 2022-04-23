@@ -109,9 +109,47 @@ order by 2 desc;
 select date,
 sum(cast(new_cases as unsigned)) as total_casos,
 sum(cast(new_deaths as unsigned)) as total_mortes,
-(sum(cast(new_deaths as unsigned)) / sum(new_cases)) * 100 as percentual_mortes
+coalesce((sum(cast(new_deaths as unsigned)) / sum(new_cases)) * 100, 'NA') as percentual_mortes
 from cap07.covid_mortes
 where continent is not null
 group by date
 order by 1,2; 
 
+# Qual o número de novos vacinados e a média móvel de novos vacinados ao longo do tempo por localidade?
+# Considere apenas os dados da América do Sul
+
+select 
+mortos.continent,
+mortos.location,
+mortos.date,
+vacinados.new_vaccinations,
+avg(cast(vacinados.new_vaccinations as unsigned)) over (partition by mortos.location order by mortos.date) as mediamovelvacinados
+from cap07.covid_mortes as mortos
+join cap07.covid_vacinacao as vacinados
+on mortos.location = vacinados.location
+and mortos.date = vacinados.date
+#where mortos.continent = 'South America'
+order by 1,2;
+
+
+# Qual o número de novos vacinados e o total de novos vacinados ao longo do tempo por continente?
+# Considere apenas os dados da América do Sul
+
+select 
+vacinados.continent,
+vacinados.location,
+vacinados.date,
+vacinados.new_vaccinations,
+sum(cast(vacinados.new_vaccinations as unsigned)) over (partition by vacinados.location order by vacinados.date) as mediamovelvacinados
+from cap07.covid_vacinacao as vacinados
+#where vacinados.continent = 'South America'
+order by 1,2;
+
+
+
+# Total de vacinados por localidade
+
+select distinct location localidade, continent continente,
+max(cast(people_fully_vaccinated as unsigned)) over (partition by location order by location) as  vacinados
+from cap07.covid_vacinacao
+order by 2,1;
