@@ -40,64 +40,82 @@ CREATE TABLE cap08.TB_INCIDENTES (
   `Neighborhoods 2` text
 );
 
-# Carregue o dataset1.csv via MySQL Workbench
 
-# Tratamento de valor ausente
+# Cria a tabela
+CREATE TABLE cap08.TB_CRIANCAS(nome varchar(20), idade int, peso float);
 
-select distinct resolution
-from cap08.tb_incidentes;
+# Insere os dados
+INSERT INTO cap08.TB_CRIANCAS 
+VALUES ('Bob', 3, 15), ('Maria', 42, 98), ('Julia', 3, 16), ('Maximiliano', 2, 12), ('Roberto', 1, 11), ('Jamil', 2, 14), ('Alberto', 3, 17);
 
-select resolution, count(*) as total
-from cap08.tb_incidentes
-group by resolution;
+# Script 03
 
-select count(*) 
-from cap08.tb_incidentes
-where resolution is null;
+# Cria a tabela
+CREATE TABLE cap08.TB_INCIDENTES_DUP (
+  `PdId` bigint DEFAULT NULL,
+  `IncidntNum` text,
+  `Incident Code` text,
+  `Category` text,
+  `Descript` text,
+  `DayOfWeek` text,
+  `Date` text,
+  `Time` text,
+  `PdDistrict` text,
+  `Resolution` text,
+  `Address` text,
+  `X` double DEFAULT NULL,
+  `Y` double DEFAULT NULL,
+  `location` text,
+  `SF Find Neighborhoods 2 2` text,
+  `Current Police Districts 2 2` text,
+  `Current Supervisor Districts 2 2` text,
+  `Analysis Neighborhoods 2 2` text,
+  `DELETE - Fire Prevention Districts 2 2` text,
+  `DELETE - Police Districts 2 2` text,
+  `DELETE - Supervisor Districts 2 2` text,
+  `DELETE - Zip Codes 2 2` text,
+  `DELETE - Neighborhoods 2 2` text,
+  `DELETE - 2017 Fix It Zones 2 2` text,
+  `Civic Center Harm Reduction Project Boundary 2 2` text,
+  `Fix It Zones as of 2017-11-06  2 2` text,
+  `DELETE - HSOC Zones 2 2` text,
+  `Fix It Zones as of 2018-02-07 2 2` text,
+  `CBD, BID and GBD Boundaries as of 2017 2 2` text,
+  `Areas of Vulnerability, 2016 2 2` text,
+  `Central Market/Tenderloin Boundary 2 2` text,
+  `Central Market/Tenderloin Boundary Polygon - Updated 2 2` text,
+  `HSOC Zones as of 2018-06-05 2 2` text,
+  `OWED Public Spaces 2 2` text,
+  `Neighborhoods 2` text
+);
 
-select count(*) 
-from cap08.tb_incidentes
-where resolution = ' ';
+# Carregue o dataset2.csv via MySQL Workbench
 
-# null é o tipo unknown no banco de dados e empty (vazio) é o nulo em uma coluna do tipo string.
-# o empty também é chamado de blank.
+# Cria a tabela
+CREATE TABLE cap08.TB_ALUNOS (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    sobrenome VARCHAR(50) NOT NULL, 
+    email VARCHAR(255) NOT NULL
+);
 
-# a principal diferença entre nulo e vazio é que o nulo é usado para se referir a nada, enquanto o vazio é usado para 
-# se referir a uma string única com comprimento zero.
+# Insere os dados
+INSERT INTO cap08.TB_ALUNOS (nome, sobrenome, email) 
+VALUES ('Carine ','Schmitt','carine.schmitt@verizon.net'),
+       ('Jean','King','jean.king@me.com'),
+       ('Peter','Ferguson','peter.ferguson@google.com'),
+       ('Janine ','Labrune','janine.labrune@aol.com'),
+       ('Jonas ','Bergulfsen','jonas.bergulfsen@mac.com'),
+       ('Janine ','Labrune','janine.labrune@aol.com'),
+       ('Susan','Nelson','susan.nelson@comcast.net'),
+       ('Zbyszek ','Piestrzeniewicz','zbyszek.piestrzeniewicz@att.net'),
+       ('Roland','Keitel','roland.keitel@yahoo.com'),
+       ('Julie','Murphy','julie.murphy@yahoo.com'),
+       ('Kwai','Lee','kwai.lee@google.com'),
+       ('Jean','King','jean.king@me.com'),
+       ('Susan','Nelson','susan.nelson@comcast.net'),
+       ('Roland','Keitel','roland.keitel@yahoo.com');
 
-select count(*) 
-from cap08.tb_incidentes
-where resolution = '';
-
-select count(*) 
-from cap08.tb_incidentes
-where nullif(resolution, '') is null;
-
-select count(*) 
-from cap08.tb_incidentes
-where trim(coalesce(resolution, '')) = '';
-
-select count(*) 
-from cap08.tb_incidentes 
-where length(rtrim(ltrim(resolution))) = 0;
-
-select isnull(nullif(resolution,''))  
-from cap08.tb_incidentes;
-
-select 
-    case 
-     when resolution = '' then 'other'
-     else resolution
-    end as resolution
-from cap08.tb_incidentes;
-
-set sql_safe_updates = 0;
-
-update cap08.tb_incidentes
-set resolution = 'other'
-where resolution = '';
-
-set sql_safe_updates = 1;
 
 
 
