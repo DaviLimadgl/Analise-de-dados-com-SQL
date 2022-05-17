@@ -1,0 +1,1 @@
+select * from cap09.tb_global_qualidade_ar;
