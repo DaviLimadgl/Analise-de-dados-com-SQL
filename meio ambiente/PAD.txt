@@ -9,13 +9,15 @@ O objetivo deste trabalho é extrair informações sobre os índices de poluiç�
 
 # 1- Quais poluentes foram considerados na pesquisa?
 
-# 2- Qual foi a média de poluição ao longo do tempo provocada pelo poluente ground-level ozone (o3)?
+# 2- Total de cidades onde foram coletada amostras:
+ 
+# 3- Qual foi a média de poluição ao longo do tempo provocada pelo poluente ground-level ozone (o3)?
 
-# 3- Qual foi a média de poluição causada pelo poluente ground-level ozone (o3) por país medida em µg/m³ (microgramas por metro cúbico)?
+# 4- Qual foi a média de poluição causada pelo poluente ground-level ozone (o3) por país medida em µg/m³ (microgramas por metro cúbico)?
 
-# 4- Considerando o resultado anterior, qual país teve maior índice de poluição geral por o3, Itália (IT) ou Espanha (ES)? Por quê?
+# 5- Considerando o resultado anterior, qual país teve maior índice de poluição geral por o3, Itália (IT) ou Espanha (ES)? Por quê?
 
-# 5- Quais localidades e países tiveram média de poluição em 2020 superior a 100 µg/m³ para o poluente fine particulate matter (pm25)?
+# 6- Quais localidades e países tiveram média de poluição em 2020 superior a 100 µg/m³ para o poluente fine particulate matter (pm25)?
 
 
 Etapa 2 - Coleta e Extração de Dados
