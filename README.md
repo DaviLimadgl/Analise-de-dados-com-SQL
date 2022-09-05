@@ -12,3 +12,11 @@
 ###### Parece que nem todos arquivos com as fontes de dados foram carregados aqui, então segue o link para baixá-los, faça download do arquivo zip
 Link para a fonte de dados:
 https://www.kaggle.com/nosbielcs/brazilian-delivery-center
+
+## Abaixo, uma pequena lista com as principais junções em SQL
+
+![Joins](../main/img/Slide2.jpg?raw=true)
+![Joins](../main/img/Slide3.jpg?raw=true)
+![Joins](../main/img/Slide4.jpg?raw=true)
+![Joins](../main/img/Slide5.jpg?raw=true)
+![Joins](../main/img/Slide6.jpg?raw=true)
