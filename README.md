@@ -20,3 +20,22 @@ https://www.kaggle.com/nosbielcs/brazilian-delivery-center
 ![Joins](../main/img/Slide4.jpg?raw=true)
 ![Joins](../main/img/Slide5.jpg?raw=true)
 ![Joins](../main/img/Slide6.jpg?raw=true)
+
+## Abaixo, uma pequena lista com os tipos de multiplicidades
+
+![Multiplicidade](../main/img/Multiplicidade/Slide2.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide3.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide4.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide5.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide6.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide7.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide8.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide9.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide10.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide11.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide12.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide13.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide14.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide15.jpg)
+![Multiplicidade](../main/img/Multiplicidade/Slide16.jpg)
+
