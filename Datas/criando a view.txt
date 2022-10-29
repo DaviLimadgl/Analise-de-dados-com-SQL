@@ -1,0 +1,30 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`%` 
+    SQL SECURITY DEFINER
+VIEW `vw_rotas_mes_atual` AS
+    SELECT 
+        CONCAT(DATE_FORMAT(`rotas`.`data`, '%d-%b'),
+                ' - ',
+                CASE
+                    WHEN WEEKDAY(`rotas`.`data`) = 0 THEN 'Segunda-feira'
+                    WHEN WEEKDAY(`rotas`.`data`) = 1 THEN 'Terça-feira'
+                    WHEN WEEKDAY(rotas.data) = 2 THEN 'Quarta-feira'
+                    WHEN WEEKDAY(rotas.data) = 3 THEN 'Quinta-feira'
+                    WHEN WEEKDAY(rotas.data) = 4 THEN 'Sexta-feira'
+                    WHEN WEEKDAY(rotas.data) = 5 THEN 'Sabado'
+                    WHEN WEEKDAY(rotas.data) = 6 THEN 'Domingo'
+                END) AS Data,
+        GROUP_CONCAT(DISTINCT rotas.tecnico
+            SEPARATOR ', 
+            ') AS Técnico Responsavel,
+        GROUP_CONCAT(DISTINCT rotas.loja
+            SEPARATOR ', 
+            ') AS Lojas,
+        rotas.obs AS Observções
+    FROM
+        rotas
+    WHERE
+        YEAR(rotas.data) = YEAR(CURDATE())
+            AND MONTH(rotas.data) = MONTH(CURDATE())
+    GROUP BY 1
