@@ -1,0 +1,22 @@
+create procedure cap10.carrega_tb_tempo(in startdate date, in stopeddate date)
+begin
+  declare currentdade date;
+  set currentdate = startdate;
+  while currentdate <= stopeddate do
+    insert into cap10.tb_tempo values(
+      year(currentdate)*1000+month(currentdate)*100 + day(currentdate),
+      currentdate,
+      year(currentdate),
+      month(currentdate),
+      day(currentdate),
+      quarter(currentdate),
+      weekofyear(currentdate),
+      date_format(currentdate, '%w'),
+      date_format(currentdate, '%m'),
+      'f',
+      case dayofweek(currentdate) when 1 then 't' when 7 then 't' else 'f' end);
+    set currentdate = adddate(currentdate, interval 1 day);
+  end while;
+end
+//
+DELIMITER
