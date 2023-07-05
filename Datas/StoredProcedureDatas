@@ -1,3 +1,4 @@
+DELIMITER //
 create procedure cap10.carrega_tb_tempo(in startdate date, in stopeddate date)
 begin
   declare currentdade date;
